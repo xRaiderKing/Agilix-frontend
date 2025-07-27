@@ -1,0 +1,10 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="160" rx="32" fill="#0F172A"></rect>
+  
+  <!-- Ciclo Scrum (curva circular con flecha) -->
+  <path d="M80 40a40 40 0 1 1-28.3 11.7" stroke="#38BDF8" stroke-width="6" fill="none" stroke-linecap="round"></path>
+  <path d="M52 52L50 67L65 65" fill="none" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Tarjetas del tablero -->
+  <rect x="30" y="110" width="20" height="10" rx="2" fill="#38BDF8"></rect>
+  </svg>
