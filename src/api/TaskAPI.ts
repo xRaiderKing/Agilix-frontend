@@ -30,7 +30,6 @@ export async function getTaskbyId({projectId, taskId} : Pick<TaskAPI, 'projectId
         if(response.success){
             return response.data
         }
-        return data
     } catch (error) {
         if(isAxiosError(error) && error.response) {
             throw new Error(error.response.data);
