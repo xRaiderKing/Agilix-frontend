@@ -84,3 +84,15 @@ export async function deleteProject(id: Project['_id']) {
 
     }
 }
+
+// Obtener estadísticas del dashboard para managers
+export async function getManagerDashboard() {
+    try {
+        const { data } = await api('/projects/manager/dashboard');
+        return data
+    } catch (error) {
+        if (isAxiosError(error) && error.response) {
+            throw new Error(error.response.data.error)
+        }
+    }
+}
