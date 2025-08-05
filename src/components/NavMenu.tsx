@@ -4,6 +4,7 @@ import { Bars3Icon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
 import type { User } from "../types"
 import { useQueryClient } from '@tanstack/react-query'
+import { useManagerStatus } from '@/hooks/useManagerStatus'
 
 type NavMenuProps = {
   name: User['name']
@@ -11,6 +12,8 @@ type NavMenuProps = {
 
 export default function NavMenu({name}: NavMenuProps) {
   const queryClient = useQueryClient()
+  const { isManager } = useManagerStatus()
+  
   const logout = () => {
     localStorage.removeItem('AUTH_TOKEN')
     queryClient.invalidateQueries({queryKey:['user']})
@@ -42,6 +45,12 @@ export default function NavMenu({name}: NavMenuProps) {
               to='/'
               className='block p-2 hover:text-purple-950'
             >Mis Proyectos</Link>
+            {isManager && (
+              <Link
+                to='/manager/dashboard'
+                className='block p-2 hover:text-purple-950'
+              >Dashboard Manager</Link>
+            )}
             <button
               className='block p-2 hover:text-purple-950'
               type='button'

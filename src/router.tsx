@@ -16,6 +16,7 @@ import ProfileVeiw from './views/profile/ProfileVeiw'
 import ChangePasswordView from './views/profile/ChangePasswordView'
 import ProfileLayout from './layouts/ProfileLayout'
 import NotFound from './views/404/NotFound'
+import ManagerDashboardView from './views/ManagerDashboardView'
 
 export default function Router() {
   return (
@@ -27,6 +28,7 @@ export default function Router() {
           <Route path='/projects/:projectId' element={<ProjectDetailsView />} />
           <Route path='/projects/:projectId/edit' element={<EditProjectView />} />
           <Route path='/projects/:projectId/team' element={<ProjectTeamView />} />
+          <Route path='/manager/dashboard' element={<ManagerDashboardView />} />
           <Route element={<ProfileLayout />}>
             <Route path='/profile' element={<ProfileVeiw />} />
             <Route path='/profile/password' element={<ChangePasswordView />} />
