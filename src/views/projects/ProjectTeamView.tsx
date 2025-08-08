@@ -1,6 +1,6 @@
 
 import { Fragment } from "react";
-import AddMemberModal from "@/components/team/addMemberModal";
+import AddMemberModal from "@/components/team/AddMemberModal";
 import { Menu, Transition } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
