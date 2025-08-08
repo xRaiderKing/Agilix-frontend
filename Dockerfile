@@ -1,12 +1,12 @@
-# Stage 1: build
-FROM node:18-alpine AS build
+# Usa Node 20 para build
+FROM node:20 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: serve app
+# Stage final para servir la app (opcional, o solo para guardar)
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
