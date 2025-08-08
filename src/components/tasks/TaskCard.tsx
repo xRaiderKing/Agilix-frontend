@@ -4,7 +4,7 @@ import { EllipsisVerticalIcon } from '@heroicons/react/24/outline'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import type { Task } from "@/types/index";
-import { deleteTask } from '@/api/TaskApi';
+import { deleteTask } from '@/api/TaskAPI';
 import { toast } from 'react-toastify';
 import { useDraggable } from '@dnd-kit/core'
 

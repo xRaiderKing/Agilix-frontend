@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import type { Task, TaskFormData } from '@/types/index';
 import { useForm } from 'react-hook-form';
 import TaskForm from './TaskForm';
-import { updateTask } from '@/api/TaskApi';
+import { updateTask } from '@/api/TaskAPI';
 import { toast } from 'react-toastify';
 
 type EditTaskModalProps = {

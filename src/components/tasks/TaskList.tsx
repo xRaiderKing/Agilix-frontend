@@ -5,7 +5,7 @@ import { statusTranlation } from "@/locales/es"
 import DropTask from "./DropTask"
 import { useParams } from 'react-router-dom'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { updateStatus } from '@/api/TaskApi'
+import { updateStatus } from '@/api/TaskAPI'
 import { toast } from 'react-toastify'
 
 type TaskListProps = {
